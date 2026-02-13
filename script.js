@@ -124,15 +124,27 @@ form.addEventListener("submit", function(e) {
 });
 
 adminToggleBtn.addEventListener("click", () => {
-    isAdmin = !isAdmin;
 
-    adminToggleBtn.textContent = isAdmin ? 
-        "Switch to Civilian Mode" : 
-        "Admin Panel";
+    if (!isAdmin) {
+        const password = prompt("Enter Admin Password:");
 
-    adminIndicator.classList.toggle("hidden");
+        if (password === "admin123") {   
+            isAdmin = true;
+            adminIndicator.classList.remove("hidden");
+            adminToggleBtn.textContent = "Switch to Civilian Mode";
+        } else {
+            alert("Incorrect password!");
+            return;
+        }
+
+    } else {
+        isAdmin = false;
+        adminIndicator.classList.add("hidden");
+        adminToggleBtn.textContent = "Admin Panel";
+    }
 
     renderComplaints();
 });
+
 
 renderComplaints();
