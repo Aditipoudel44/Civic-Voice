@@ -1,15 +1,19 @@
-#Civic Voice
+# Civic Voice
+
 Civic Voice is a frontend-only public complaint management system that allows citizens to report civic issues and helps administrators track and resolve them efficiently. 
 It focuses on bridging the gap between citizens and local authorities through a simple, interactive digital platform.
-##Problem Statement
+
+## Problem Statement
 Many communities still rely on manual complaint reporting. Citizens have to visit offices or rely on word-of-mouth to report problems like road damage, water issues, or electricity outages.
 This slows down response time and reduces transparency.
 This project provides a digital platform where citizens can submit complaints online, and administrators can efficiently manage, track, and resolve them—making civic management faster, organized, and more accountable.
-##Purpose of the Project
+
+## Purpose of the Project
 -Practice frontend development skills with a real-world application.
 -Understand civic service workflows and how digital tools can improve them.
 -Demonstrate how a simple digital platform can help citizens communicate issues and administrators take action efficiently.
-##Features
+
+## Features
 - Submit Complaints
   - Citizens can submit complaints with details including:
   - Full Name
@@ -39,14 +43,14 @@ This project provides a digital platform where citizens can submit complaints on
   - Interactive hover effects on stats and complaint cards.
   - Admin mode indicator clearly shows when administrative features are enabled.
 
-##Technologies Used
+## Technologies Used
 - HTML
 - CSS
 - Tailwind CSS
 - JavaScript
 - Git and GitHub
 
-##Data Validation and Functionality
+## Data Validation and Functionality
 - Required fields validated before submission.
 - Prevents form submission if fields are empty.
 - Status updates dynamically when complaints are resolved.
