@@ -9,9 +9,9 @@ This slows down response time and reduces transparency.
 This project provides a digital platform where citizens can submit complaints online, and administrators can efficiently manage, track, and resolve them—making civic management faster, organized, and more accountable.
 
 ## Purpose of the Project
--Practice frontend development skills with a real-world application.
--Understand civic service workflows and how digital tools can improve them.
--Demonstrate how a simple digital platform can help citizens communicate issues and administrators take action efficiently.
+- Practice frontend development skills with a real-world application.
+- Understand civic service workflows and how digital tools can improve them.
+- Demonstrate how a simple digital platform can help citizens communicate issues and administrators take action efficiently.
 
 ## Features
 - Submit Complaints
