@@ -6,104 +6,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="bg-gray-100 min-h-screen">
 
-    
-    <header class="header-gradient text-white shadow-lg">
-        <div class="max-w-7xl mx-auto flex justify-between items-center p-5">
-            <div>
-                <h1 class="text-3xl font-bold">Civic Voice</h1>
-                <p class="text-sm opacity-90">Public Complaint Management System</p>
-            </div>
-
-            <div class="space-x-3">
-                <button id="adminToggle" class="bg-white text-blue-600 px-4 py-2 rounded-md font-semibold hover:bg-gray-100">
-                    Admin Panel
-                </button>
-                <button class="bg-blue-800 px-4 py-2 rounded-md hover:bg-blue-900">
-                    Logout
-                </button>
-            </div>
-        </div>
-    </header>
-
-    
-    <div class="max-w-7xl mx-auto p-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
-
-        <div class="shadow-lg rounded-xl p-6 lg:col-span-1 form-card">
-            <h2 class="text-xl font-semibold mb-4">Submit a Complaint</h2>
-
-            <form id="reportForm" class="space-y-4">
-
-                <input type="text" id="name" placeholder="Full Name" class="input-style w-full">
-
-                <input type="text" id="municipality" placeholder="Municipality" class="input-style w-full">
-
-                <input type="number" id="ward" placeholder="Ward No" class="input-style w-full">
-
-                <select id="category" class="input-style w-full">
-                    <option value="">Select Category</option>
-                    <option value="Road">Road</option>
-                    <option value="Water">Water</option>
-                    <option value="Electricity">Electricity</option>
-                    <option value="Garbage">Garbage</option>
-                    <option value="Street Light">Street Light</option>
-                    <option value="Drainage">Drainage</option>
-                    <option value="Public Property Damage">Public Property Damage</option>
-                    <option value="Others">Others</option>
-                </select>
-
-                <input type="text" id="location" placeholder="Specific Location" class="input-style w-full">
-
-                <textarea id="description" placeholder="Describe the issue..." rows="4" class="input-style w-full"></textarea>
-
-                <button type="submit" class="btn-primary w-full">Submit Complaint</button>
-            </form>
+<header class="header-gradient text-white shadow-lg">
+    <div class="max-w-7xl mx-auto flex justify-between items-center p-5">
+        <div>
+            <h1 class="text-3xl font-bold">Civic Voice</h1>
+            <p class="text-sm opacity-90">Public Complaint Management System</p>
         </div>
 
-        <div class="lg:col-span-2 space-y-6">
+        <div class="space-x-3 flex items-center">
+            <span id="adminIndicator" class="hidden bg-red-600 px-3 py-1 rounded-full text-sm font-semibold">
+                ADMIN MODE
+            </span>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-
-                <div class="card-blue">
-                    <h3>Total Complaints</h3>
-                    <p id="totalReports">0</p>
-                </div>
-
-                <div class="card-green">
-                    <h3>Resolved</h3>
-                    <p id="resolvedReports">0</p>
-                </div>
-
-                <div class="card-orange">
-                    <h3>Pending</h3>
-                    <p id="pendingReports">0</p>
-                </div>
-
-            </div>
-
-           
-            <div class="bg-white shadow-lg rounded-xl p-6">
-                <div class="flex justify-between mb-4">
-                    <h2 class="text-lg font-semibold">Recent Complaints</h2>
-                    <button class="text-blue-600 hover:underline">View All</button>
-                </div>
-
-                <div id="reportsContainer" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
-            </div>
-
+            <button id="adminToggle" 
+                class="bg-white text-blue-600 px-4 py-2 rounded-md font-semibold hover:bg-gray-100">
+                Admin Panel
+            </button>
         </div>
     </div>
+</header>
 
-  
-    <footer class="bg-gray-800 text-white text-center py-4 mt-6">
-        &copy; 2026 Civic Voice. All rights reserved.
-    </footer>
+<div class="max-w-7xl mx-auto p-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
 
-    <script src="script.js"></script>
+    <div class="shadow-lg rounded-xl p-6 lg:col-span-1 form-card">
+        <h2 class="text-xl font-semibold mb-4">Submit a Complaint</h2>
+
+        <form id="reportForm" class="space-y-4">
+
+            <input type="text" id="name" placeholder="Full Name" class="input-style w-full required-field">
+
+            <input type="text" id="municipality" placeholder="Municipality" class="input-style w-full required-field">
+
+            <input type="number" id="ward" placeholder="Ward No" class="input-style w-full required-field">
+
+            <select id="category" class="input-style w-full required-field">
+                <option value="">Select Category</option>
+                <option value="Road">Road</option>
+                <option value="Water">Water</option>
+                <option value="Electricity">Electricity</option>
+                <option value="Garbage">Garbage</option>
+                <option value="Street Light">Street Light</option>
+                <option value="Drainage">Drainage</option>
+                <option value="Public Property Damage">Public Property Damage</option>
+                <option value="Others">Others</option>
+            </select>
+
+            <input type="text" id="location" placeholder="Specific Location" class="input-style w-full required-field">
+
+            <textarea id="description" placeholder="Describe the issue..." rows="4" class="input-style w-full required-field"></textarea>
+
+            <button type="submit" class="btn-primary w-full">Submit Complaint</button>
+        </form>
+    </div>
+
+    <div class="lg:col-span-2 space-y-6">
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+
+            <div class="card-blue">
+                <h3>Total Complaints</h3>
+                <p id="totalReports">0</p>
+            </div>
+
+            <div class="card-green">
+                <h3>Resolved</h3>
+                <p id="resolvedReports">0</p>
+            </div>
+
+            <div class="card-orange">
+                <h3>Pending</h3>
+                <p id="pendingReports">0</p>
+            </div>
+
+        </div>
+
+        <div class="bg-white shadow-lg rounded-xl p-6">
+            <h2 class="text-lg font-semibold mb-4">Recent Complaints</h2>
+            <div id="reportsContainer" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+        </div>
+
+    </div>
+</div>
+
+<footer class="bg-gray-800 text-white text-center py-4 mt-6">
+    &copy; 2026 Civic Voice. All rights reserved.
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
