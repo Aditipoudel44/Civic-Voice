@@ -3,28 +3,35 @@
 }
 
 .form-card {
-    background: #021964; 
+    background: #021964;
     color: white;
     padding: 25px;
     border-radius: 16px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
-
 .input-style {
-    border: 1px solid rgba(255,255,255,0.6);
+    border: 1px solid #d1d5db;
     padding: 10px;
     border-radius: 8px;
-    background-color: rgba(255,255,255,0.1);
-    color: white;
+    background-color: white;       
+    color: #1f2937;               
     transition: 0.3s;
+    font-size: 14px;
 }
+
 .input-style::placeholder {
-    color: rgba(255,255,255,0.7);
+    color: #6b7280;
 }
+
 .input-style:focus {
     outline: none;
-    border-color: white;
-    box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+.error {
+    border: 2px solid #ff4d4d !important;
+    background-color: #ffe5e5 !important;
 }
 
 .btn-primary {
@@ -35,31 +42,43 @@
     font-weight: bold;
     transition: 0.3s;
 }
+
 .btn-primary:hover {
     background-color: #1e40af;
 }
 
-.card-blue, .card-green, .card-orange {
+.card-blue,
+.card-green,
+.card-orange {
     color: white;
     padding: 20px;
     border-radius: 12px;
     text-align: center;
     transition: transform 0.2s, box-shadow 0.2s;
 }
+
 .card-blue {
     background: linear-gradient(to right, #3b82f6, #60a5fa);
 }
+
 .card-green {
     background: linear-gradient(to right, #16a34a, #4ade80);
 }
+
 .card-orange {
     background: linear-gradient(to right, #ea580c, #fb923c);
 }
-.card-blue:hover, .card-green:hover, .card-orange:hover {
+
+.card-blue:hover,
+.card-green:hover,
+.card-orange:hover {
     transform: translateY(-4px);
     box-shadow: 0 6px 12px rgba(0,0,0,0.2);
 }
-.card-blue p, .card-green p, .card-orange p {
+
+.card-blue p,
+.card-green p,
+.card-orange p {
     font-size: 28px;
     font-weight: bold;
 }
@@ -69,6 +88,7 @@
     padding: 15px;
     transition: 0.3s;
 }
+
 #reportsContainer > div:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
